@@ -10,7 +10,7 @@ import { List } from '../components/List/List'
 import { SubmissionModal } from '../components/SubmissionModal/SubmissionModal'
 
 import { DataType } from '../types/data'
-import { data } from '../data'
+import { data, getId } from '../data'
 
 let miniSearch = new MiniSearch({
   fields: ['subject', 'about'], // fields to index for full-text search
@@ -21,6 +21,7 @@ let miniSearch = new MiniSearch({
   },
 })
 
+data.forEach((entry) => (entry.id = getId()))
 miniSearch.addAll(data)
 
 const theme = createTheme()
