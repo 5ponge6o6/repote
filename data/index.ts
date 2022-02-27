@@ -288,4 +288,20 @@ export const data: DataType[] = [
     source:
       'https://www.15min.lt/naujiena/aktualu/komentarai/marius-laur…us-kokie-tikrieji-g-ziemelio-rysiai-su-kremliumi-500-1283658',
   },
+  {
+    subject: 'Salmo',
+    logo: 'https://salmoru.com/local/assets/img/head-logo.svg',
+    about: 'Žūklės prekės',
+    connection: 'Žūklės prekės, rusų kapitalo',
+    source: 'https://salmoru.com/',
+  },
+  {
+    subject: 'Dominos pizza LT',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Dominos_pizza_logo.svg',
+    connection:
+      'Amerikiečių frančizinis picerijų tinklas, Lietuvoje valdomas rusijos oligarcho (kuriam priklauso Dominos frančizės RUS ir BY) per ofšorinę Kipro įmonę Morgacita Limited',
+    about: 'Picos',
+    source:
+      'https://www.lrt.lt/naujienos/verslas/4/1450560/domino-s-pizza-piceriju-tinklas-zengia-i-lietuva',
+  },
 ]
