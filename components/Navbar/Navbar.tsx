@@ -35,7 +35,7 @@ export const Navbar = ({ onSearch, onSubmission }: Props) => {
           </Tooltip>
 
           <Link href='/qr' passHref>
-            <Tooltip title='Skenuoti barkodą' placement='right'>
+            <Tooltip title='Tikrinti kilmės šalį pagal brukšninį kodą' placement='right'>
               <IconButton component='a'>
                 <QrCodeScanner className={styles.addIcon} />
               </IconButton>
