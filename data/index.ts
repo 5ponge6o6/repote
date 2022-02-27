@@ -279,15 +279,15 @@ export const data: DataType[] = [
       'Transporto firma. Veikia Lietuvoje, turi filialą Rusijoje (Kaliningrade)',
     source: 'https://www.rvtransport.lt/kontaktai/',
   },
-  {
-    subject: 'Avia Solutions Group',
-    logo: 'https://aviasg.com/images/top_logo.png',
-    about: 'Aviacija',
-    connection:
-      'Gedimino Žiemelio grupė valdanti Aviacijos verslo įmones visame pasaulyje. Valdo įmones: „Avion Express“, „Tiketa Tour“ „FL Technics“, „BGS“, „BAA Training“, „KlasJet“, „Magma Aviation“. Statė oro uostą Maskvoje. Užsakymą gavo, po to, kai jo tėvas Vidmantas Žiemelis organizavo anti Visagino AE referendumą. Vėliau iškilo Astravo AE šalia Vilniaus. Direktorių tarybos narys: Kremliaus draugas Lietuvoje Vygaudas Ušackas',
-    source:
-      'https://www.15min.lt/naujiena/aktualu/komentarai/marius-laurinavicius-kokie-tikrieji-g-ziemelio-rysiai-su-kremliumi-500-1283658',
-  },
+  // {
+  //   subject: 'Avia Solutions Group',
+  //   logo: 'https://aviasg.com/images/top_logo.png',
+  //   about: 'Aviacija',
+  //   connection:
+  //     'Gedimino Žiemelio grupė valdanti Aviacijos verslo įmones visame pasaulyje. Valdo įmones: „Avion Express“, „Tiketa Tour“ „FL Technics“, „BGS“, „BAA Training“, „KlasJet“, „Magma Aviation“. Statė oro uostą Maskvoje. Užsakymą gavo, po to, kai jo tėvas Vidmantas Žiemelis organizavo anti Visagino AE referendumą. Vėliau iškilo Astravo AE šalia Vilniaus. Direktorių tarybos narys: Kremliaus draugas Lietuvoje Vygaudas Ušackas',
+  //   source:
+  //     'https://www.15min.lt/naujiena/aktualu/komentarai/marius-laurinavicius-kokie-tikrieji-g-ziemelio-rysiai-su-kremliumi-500-1283658',
+  // },
   // {
   //   subject: 'Salmo',
   //   logo: 'https://salmoru.com/local/assets/img/head-logo.svg',

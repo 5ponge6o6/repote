@@ -13,7 +13,8 @@ import { DataType } from '../types/data'
 import { data, getId } from '../data'
 import Link from 'next/link'
 import { Alert, IconButton, Tooltip } from '@mui/material'
-import { ShoppingCart } from '@mui/icons-material'
+import ShoppingCart from '@mui/icons-material/ShoppingCart'
+import styles from './index.module.css'
 
 let miniSearch = new MiniSearch({
   fields: ['subject', 'about'], // fields to index for full-text search
@@ -76,19 +77,9 @@ const Home: NextPage = () => {
           extraIcons={
             <Link href='/buy-ukr' passHref>
               <Tooltip title='Rinkis Ukrainietišką' placement='bottom-end'>
-                <IconButton component='a' sx={{ position: 'relative' }}>
-                  <ShoppingCart sx={{ color: 'white' }} />
-                  <div
-                    style={{
-                      position: 'absolute',
-                      right: 2,
-                      bottom: 0,
-                      fontSize: 18,
-                      color: 'white',
-                    }}
-                  >
-                    🇺🇦
-                  </div>
+                <IconButton component='a' className={styles.iconButton}>
+                  <ShoppingCart className={styles.icon} />
+                  <div className={styles.badge}>🇺🇦</div>
                 </IconButton>
               </Tooltip>
             </Link>

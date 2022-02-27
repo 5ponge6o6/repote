@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import MiniSearch from 'minisearch'
+import styles from './index.module.css'
 
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
@@ -13,7 +14,7 @@ import { DataType } from '../types/data'
 import { data, getId } from '../data/ukrainian'
 import Link from 'next/link'
 import { Alert, IconButton, Tooltip } from '@mui/material'
-import { RemoveShoppingCart } from '@mui/icons-material'
+import ShoppingCart from '@mui/icons-material/ShoppingCart'
 
 let miniSearch = new MiniSearch({
   fields: ['subject', 'about'], // fields to index for full-text search
@@ -75,8 +76,9 @@ const BuyUkr: NextPage = () => {
           extraIcons={
             <Link href='/' passHref>
               <Tooltip title='Susiję su rusija' placement='bottom-end'>
-                <IconButton component='a'>
-                  <RemoveShoppingCart sx={{ color: 'white' }} />
+                <IconButton component='a' className={styles.iconButton}>
+                  <ShoppingCart className={styles.icon} />
+                  <div className={styles.badge}>🚫</div>
                 </IconButton>
               </Tooltip>
             </Link>
