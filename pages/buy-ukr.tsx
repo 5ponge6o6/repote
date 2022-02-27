@@ -54,7 +54,7 @@ const BuyUkr: NextPage = () => {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Rinkis Ukrainietiška</title>
+        <title>Rinkis Ukrainietišką</title>
       </Head>
 
       <div>
