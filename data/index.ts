@@ -1,4 +1,4 @@
-import { DataType } from '../types/data';
+import { DataType } from '../types/data'
 
 let i = 0
 const getId = () => i++
@@ -72,4 +72,4 @@ export const data: DataType[] = [
     source:
       'http://www.viciunaigroup.eu/veiklos-kryptys/maisto-produktu-gamyba/ooo-vichiunai-rus',
   },
-];
+]

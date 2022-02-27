@@ -1,6 +1,14 @@
-import { Alert, AlertColor, Fab, Input, Tooltip } from '@mui/material'
+import {
+  Alert,
+  AlertColor,
+  Fab,
+  Input,
+  Tooltip,
+  Stack,
+  Typography,
+} from '@mui/material'
 import UploadIcon from '@mui/icons-material/Upload'
-import { ChangeEvent, useCallback, useEffect, useRef, useState } from 'react'
+import { ChangeEvent, useCallback, useEffect, useState } from 'react'
 import styles from './QrScanner.module.css'
 import Quagga from 'quagga'
 import { CameraAlt } from '@mui/icons-material'
@@ -37,7 +45,7 @@ enum OriginCountry {
 
 function getOriginCountry(eanCode: string) {
   eanCode = eanCode.trim()
-  if (eanCode.length !== 13) {
+  if (eanCode.length < 3) {
     return undefined
   }
 
@@ -48,7 +56,7 @@ function getOriginCountry(eanCode: string) {
 export default function QrScanner() {
   const [captureError, setCaptureError] = useState<Error | null>(null)
   const [barcode, setBarcode] = useState('')
-  const [usingUpload, setUsingUpload] = useState(false)
+  const [mode, setMode] = useState<'manual' | 'camera' | 'upload'>('manual')
   const [detectionStatus, setDetectionStatus] = useState({
     message: '',
     severity: 'error' as AlertColor,
@@ -64,7 +72,7 @@ export default function QrScanner() {
   }, [])
 
   const handleStart = useCallback(async () => {
-    setUsingUpload(false)
+    setMode('camera')
     Quagga.init(QUAGGA_CONFIG, (err: any) => {
       if (err) {
         console.log('Failed to init Quagga', err)
@@ -122,7 +130,7 @@ export default function QrScanner() {
         return
       }
 
-      setUsingUpload(true)
+      setMode('upload')
       Quagga.stop()
       const src = URL.createObjectURL(target.files[0])
 
@@ -163,29 +171,33 @@ export default function QrScanner() {
     checkEan(barcode)
   }, [checkEan, barcode])
 
-  useEffect(() => {
-    handleStart()
-  }, [handleStart])
-
   return (
     <>
-      {detectionStatus.message && (
-        <Alert severity={detectionStatus.severity}>
-          {detectionStatus.message}
-        </Alert>
-      )}
       <div className={styles.container}>
-        <div className={styles.viewportContainer}>
-          <div id='interactive' className={`viewport ${styles.viewport}`} />
-        </div>
+        <Stack spacing={2}>
+          {detectionStatus.message && (
+            <Alert severity={detectionStatus.severity}>
+              {detectionStatus.message}
+            </Alert>
+          )}
 
-        <div className={styles.controls}>
+          <Typography>
+            Įveskite barkodą (bent 3 skaičius) arba naudokite kamerą nuskanuoti
+            barkodui
+          </Typography>
+
           <Input
             value={barcode}
             onChange={(e) => setBarcode(e.target.value)}
             placeholder='Įvesti barkodą'
           />
 
+          <div className={styles.viewportContainer}>
+            <div id='interactive' className={`viewport ${styles.viewport}`} />
+          </div>
+        </Stack>
+
+        <div className={styles.controls}>
           <div className={styles.spacer} />
 
           <input
@@ -206,7 +218,7 @@ export default function QrScanner() {
               <UploadIcon />
             </Fab>
           </Tooltip>
-          {(captureError || usingUpload) && (
+          {(captureError || mode !== 'camera') && (
             <Tooltip title='Naudoti kamerą' placement='top'>
               <Fab
                 color='primary'
