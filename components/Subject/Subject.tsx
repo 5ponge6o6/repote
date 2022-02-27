@@ -21,6 +21,7 @@ export const Subject = ({ logo, searchWords, subject }: Props) => {
         variant='rounded'
         className={styles.avatar}
         sx={{ width: 64, height: 64 }}
+        imgProps={{ sx: { objectFit: 'contain' } }}
       />
 
       <Highlighter searchWords={searchWords} textToHighlight={subject} />
