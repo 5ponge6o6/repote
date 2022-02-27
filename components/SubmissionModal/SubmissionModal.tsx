@@ -142,40 +142,8 @@ const FormContent = ({ onSubmit }: any) => {
   )
 }
 
-const InfoContent = ({ onClose, message }: any) => {
-  const onClick = () => {
-    window.open(
-      `mailto:${message.email}?subject=${message.subject}&body=${message.body}`
-    )
-
-    onClose()
-  }
-
-  return (
-    <Alert variant='filled' severity='info'>
-      <Stack spacing={2}>
-        <span>
-          Po šio žingsnio bus suformuotas elektroninis laiškas pagal jūsų
-          pateiktus duomenis. Išsiųskite laišką ir mes pridėsime įrašą greitu
-          metu.
-        </span>
-        <Button
-          onClick={onClick}
-          variant='contained'
-          color='success'
-          fullWidth
-          size='small'
-        >
-          Gerai
-        </Button>
-      </Stack>
-    </Alert>
-  )
-}
-
 export const SubmissionModal = ({ onClose }: Props) => {
-  const [step, setStep] = useState('initial')
-  const [message, setMessage] = useState({})
+  const [message, setMessage] = useState('')
 
   const onSubmit = (values: any) => {
     const errors = validateForm(values)
@@ -184,19 +152,21 @@ export const SubmissionModal = ({ onClose }: Props) => {
       return errors
     }
 
-    const mappedValues = Object.entries(values)
-      .map(([key, value]) => {
-        return `[[${key}:${value}]]`
-      })
-      .join('%0d%0a') // mail new line
-
-    setMessage({
-      email: 'stoprus@protonmail.com',
-      subject: 'Pridėti subjektą',
-      body: mappedValues,
+    const formData = new FormData()
+    Object.entries(values).forEach(([key, value]) => {
+      formData.append(key, String(value))
     })
 
-    setStep('info')
+    fetch('https://formpost.app/stoprus@protonmail.com', {
+      method: 'post',
+      body: formData,
+      mode: 'no-cors',
+    }).then(() => {
+      setMessage(
+        'Dėkui! Peržiūrėsime ir pridėsime įrašą greitu metu. Langas pats užsidarys po 5 sekundžių'
+      )
+      setTimeout(onClose, 5000)
+    })
   }
 
   return (
@@ -207,13 +177,15 @@ export const SubmissionModal = ({ onClose }: Props) => {
       aria-describedby='modal-modal-description'
     >
       <Paper className={styles.container}>
-        {step === 'initial' && (
-          <IconButton className={styles.closeButton} onClick={onClose}>
-            <CloseIcon />
-          </IconButton>
+        <IconButton className={styles.closeButton} onClick={onClose}>
+          <CloseIcon />
+        </IconButton>
+
+        {message ? (
+          <Alert severity='success'>{message}</Alert>
+        ) : (
+          <FormContent onSubmit={onSubmit} />
         )}
-        {step === 'initial' && <FormContent onSubmit={onSubmit} />}
-        {step === 'info' && <InfoContent onClose={onClose} message={message} />}
       </Paper>
     </Modal>
   )
