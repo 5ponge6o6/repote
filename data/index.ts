@@ -195,4 +195,33 @@ export const data: DataType[] = [
     source:
       'https://www.lrytas.lt/verslas/rinkos-pulsas/2020/05/18/news/fntt-isaiskinto-rusisko-kapitalo-tez-tour-ciuptuvai-gviesiasi-valstybes-pinigu-14910088',
   },
+  {
+    subject: 'Motoshop',
+    about: 'Vičiūnų grupei priklausantis motociklų pardavimo salonas',
+    source: 'https://www.motoshop.lt/apie-mus',
+    logo: 'https://www.motoshop.lt/skin/frontend/default/motoshop/images/logo.png',
+    connection: 'Vičiūnai Group narė',
+  },
+  {
+    subject: 'Girteka logistics',
+    logo: 'https://www.girteka.eu/wp-content/uploads/Girteka-logo-transp-2.png',
+    about: 'Logistika',
+    connection:
+      'Transporto bazė Smolenske, krovinių pervežimas iš vakarų Europos į Rusiją',
+    source: 'https://www.girteka.eu/lt/drivers/transporto-bazes/',
+  },
+  {
+    subject: 'Tess',
+    logo: 'https://img.mazuma.lt/media/images/maxima/maxima_4ecf038a62b1b31c127457488eb91a65df450fa35715a7f0703ab235e2bd0931.jpg',
+    about: 'Arbata',
+    connection: 'Rusijos kapitalo įmonė (“Orimi Trade”, Sankt Peterburgas)',
+    source: 'https://maximus.mn/?product=tess',
+  },
+  {
+    subject: 'Rollton',
+    logo: 'https://ksd-images.lt/display/aikido/store/322fe221a6b02a19f1c7abcdbad6ea98.jpg',
+    about: 'Makaronai',
+    connection: 'Rusijos kapitalo įmonė',
+    source: 'https://kian.ru/eng/projects/rollton',
+  },
 ]
