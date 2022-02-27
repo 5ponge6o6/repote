@@ -12,6 +12,7 @@ import Tooltip, { tooltipClasses } from '@mui/material/Tooltip'
 import AddTaskSharpIcon from '@mui/icons-material/AddTaskSharp'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import QrCodeScanner from '@mui/icons-material/QrCodeScanner'
+import MailOutlineIcon from '@mui/icons-material/MailOutline'
 import { styled } from '@mui/material/styles'
 import { useLocalStorage } from '../../utils/useLocalStorage'
 
@@ -100,6 +101,17 @@ export const Navbar = ({ onSearch, onSubmission }: Props) => {
             </IconButton>
           </CustomWidthTooltip>
 
+          <Link href='mailto:stoprus@protonmail.com' passHref>
+            <Tooltip
+              title='Parašykite mums, jeigu turite klausimų ar pasiūlymų: stoprus@protonmail.com'
+              placement='bottom-end'
+            >
+              <IconButton component='a'>
+                <MailOutlineIcon className={styles.icon} />
+              </IconButton>
+            </Tooltip>
+          </Link>
+
           <Typography
             variant='caption'
             noWrap
@@ -119,7 +131,6 @@ export const Navbar = ({ onSearch, onSubmission }: Props) => {
               className={styles.search}
             >
               <SearchIcon />
-
               <InputBase
                 placeholder='Ieškoti...'
                 className={styles.searchInput}
