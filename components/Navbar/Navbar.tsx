@@ -50,7 +50,10 @@ export const Navbar = ({ onSearch, onSubmission }: Props) => {
           </Tooltip>
 
           <Link href='/qr' passHref>
-            <Tooltip title='Tikrinti kilmės šalį pagal brukšninį kodą' placement='right'>
+            <Tooltip
+              title='Tikrinti kilmės šalį pagal brukšninį kodą'
+              placement='right'
+            >
               <IconButton component='a'>
                 <QrCodeScanner className={styles.icon} />
               </IconButton>
@@ -59,6 +62,8 @@ export const Navbar = ({ onSearch, onSubmission }: Props) => {
 
           <CustomWidthTooltip
             {...(aboutShown !== 'shown' ? { open: true } : {})}
+            enterTouchDelay={1}
+            leaveTouchDelay={5000}
             title={
               <Typography>
                 Pateikiame patikrintą sąrašą pilnai arba dalinai Rusijos
