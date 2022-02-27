@@ -43,7 +43,7 @@ export const Navbar = ({ onSearch, onSubmission }: Props) => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static'>
         <Toolbar>
-          <Tooltip title='Pridėti daugiau subjektų' placement='right'>
+          <Tooltip title='Pridėti daugiau subjektų' placement='bottom-end'>
             <IconButton onClick={onSubmission}>
               <AddTaskSharpIcon className={styles.icon} />
             </IconButton>
@@ -52,7 +52,7 @@ export const Navbar = ({ onSearch, onSubmission }: Props) => {
           <Link href='/qr' passHref>
             <Tooltip
               title='Tikrinti kilmės šalį pagal brukšninį kodą'
-              placement='right'
+              placement='bottom-end'
             >
               <IconButton component='a'>
                 <QrCodeScanner className={styles.icon} />
