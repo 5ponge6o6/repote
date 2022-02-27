@@ -130,8 +130,10 @@ export default function QrScanner() {
         return
       }
 
+      if (mode === 'camera') {
+        Quagga.stop()
+      }
       setMode('upload')
-      Quagga.stop()
       const src = URL.createObjectURL(target.files[0])
 
       Quagga.decodeSingle(
@@ -146,7 +148,7 @@ export default function QrScanner() {
         }
       )
     },
-    [handleDetected]
+    [handleDetected, mode]
   )
 
   const checkEan = useCallback((value) => {
@@ -172,65 +174,63 @@ export default function QrScanner() {
   }, [checkEan, barcode])
 
   return (
-    <>
-      <div className={styles.container}>
-        <Stack spacing={2}>
-          {detectionStatus.message && (
-            <Alert severity={detectionStatus.severity}>
-              {detectionStatus.message}
-            </Alert>
-          )}
+    <div className={styles.container}>
+      <Stack spacing={2} className={styles.stack}>
+        {detectionStatus.message && (
+          <Alert severity={detectionStatus.severity}>
+            {detectionStatus.message}
+          </Alert>
+        )}
 
-          <Typography>
-            Įveskite barkodą (bent 3 skaičius) arba naudokite kamerą nuskanuoti
-            barkodui
-          </Typography>
+        <Typography>
+          Įveskite barkodą (bent 3 skaičius) arba naudokite kamerą nuskanuoti
+          barkodui
+        </Typography>
 
-          <Input
-            value={barcode}
-            onChange={(e) => setBarcode(e.target.value)}
-            placeholder='Įvesti barkodą'
-          />
+        <Input
+          value={barcode}
+          onChange={(e) => setBarcode(e.target.value)}
+          placeholder='Įvesti barkodą'
+        />
 
-          <div className={styles.viewportContainer}>
-            <div id='interactive' className={`viewport ${styles.viewport}`} />
-          </div>
-        </Stack>
+        <div className={styles.viewportContainer}>
+          <div id='interactive' className={`viewport ${styles.viewport}`} />
+        </div>
+      </Stack>
 
-        <div className={styles.controls}>
-          <div className={styles.spacer} />
+      <div className={styles.controls}>
+        <div className={styles.spacer} />
 
-          <input
-            id='icon-button-file'
-            accept='image/*'
-            type='file'
-            onChange={handleUpload}
-            hidden
-          />
-          <Tooltip title='Įkelti nuotrauką' placement='top'>
+        <input
+          id='icon-button-file'
+          accept='image/*'
+          type='file'
+          onChange={handleUpload}
+          hidden
+        />
+        <Tooltip title='Įkelti nuotrauką' placement='top'>
+          <Fab
+            color='secondary'
+            size='medium'
+            aria-label='Upload'
+            htmlFor='icon-button-file'
+            component='label'
+          >
+            <UploadIcon />
+          </Fab>
+        </Tooltip>
+        {(captureError || mode !== 'camera') && (
+          <Tooltip title='Naudoti kamerą' placement='top'>
             <Fab
-              color='secondary'
-              size='medium'
-              aria-label='Upload'
-              htmlFor='icon-button-file'
-              component='label'
+              color='primary'
+              aria-label='Capture live'
+              onClick={handleStart}
             >
-              <UploadIcon />
+              <CameraAlt />
             </Fab>
           </Tooltip>
-          {(captureError || mode !== 'camera') && (
-            <Tooltip title='Naudoti kamerą' placement='top'>
-              <Fab
-                color='primary'
-                aria-label='Capture live'
-                onClick={handleStart}
-              >
-                <CameraAlt />
-              </Fab>
-            </Tooltip>
-          )}
-        </div>
+        )}
       </div>
-    </>
+    </div>
   )
 }

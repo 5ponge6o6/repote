@@ -1,7 +1,11 @@
 .container {
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 20px;
+}
+
+.stack {
+  width: 100%;
 }
 
 .controls {
@@ -27,14 +31,20 @@
 }
 
 .viewport {
-  width: 400px;
-  height: 300px;
+  position: relative;
+  margin: 0 auto;
+  /* width: 400px;
+  height: 300px; */
+  width: 100%;
+  height: auto;
 }
 
 .viewport canvas,
 .viewport video {
-  width: 400px;
-  height: 300px;
+  /* width: 400px;
+  height: 300px; */
+  width: 100%;
+  height: auto;
   position: absolute;
   top: 0;
   left: 0;
@@ -42,6 +52,8 @@
 
 .viewport canvas.drawingBuffer,
 .viewport video.drawingBuffer {
-  width: 400px;
-  height: 300px;
+  /* width: 400px;
+  height: 300px; */
+  width: 100%;
+  height: auto;
 }
