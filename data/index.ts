@@ -224,4 +224,68 @@ export const data: DataType[] = [
     connection: 'Rusijos kapitalo įmonė',
     source: 'https://kian.ru/eng/projects/rollton',
   },
+  {
+    subject: 'UAB Morendi',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/MORENDI_LOGO.jpg/800px-MORENDI_LOGO.jpg',
+    about: 'Automobiliai',
+    source: 'https://www.morendi.ru/',
+    connection: 'Rusiško kapitalo įmonė įsikūrusi Vilniuje',
+  },
+  {
+    subject: 'DUNAEV',
+    about: 'Jaukas ir kitos prekės žvejams',
+    connection: 'Įmonė Rusijoje. Savininkas DUNAEV.',
+    logo: 'https://cdn.прикормка-дунаев.рф/wa-data/public/site/themes/vivashop1/img/logo@2x.jpg?v1644720059',
+    source: 'https://xn----7sbbiihqqatpgkod7c.xn--p1ai/',
+  },
+  {
+    subject: 'ŽŪB Delikatesas',
+    logo: 'https://www.atradau.lt/public_files/logos/0-20441300-1343916191_delikatesas-logo_pantone.gif',
+    about: 'Maisto prekės',
+    connection:
+      'V. Kaikario įmonė pagarsejusio prieš sankcijas Rusijai 2014m maidano metu, pripažinusio savo verslo ryšius su Rusija.',
+    source:
+      'https://www.lrt.lt/naujienos/verslas/4/38522/verslininkas-v-…ris-galesime-savo-tankus-sviestu-tepti-nes-jo-nebus-kur-deti',
+  },
+  {
+    subject: 'Žagarės pieninė',
+    logo: 'http://www.joniskis.net/wp-content/uploads/2015/04/1.jpg',
+    about: 'Maisto prekės',
+    connection:
+      'V. Kaikario įmonė pagarsejusio prieš sankcijas Rusijai 2014m maidano metu, pripažinusio savo verslo ryšius su Rusija.',
+    source:
+      'https://www.lrt.lt/naujienos/verslas/4/38522/verslininkas-v-…ris-galesime-savo-tankus-sviestu-tepti-nes-jo-nebus-kur-deti',
+  },
+  {
+    subject: 'Tui Baltics',
+    logo: 'https://rekvizitai.vz.lt/photos/tt_baltic.jpg',
+    connection: 'Pelno gavėjas rusas Alexey Mordashov.',
+    source: 'https://en.m.wikipedia.org/wiki/TUI_Group',
+    about: 'Kelionių organizatorius',
+  },
+  {
+    logo: 'https://freskofiorito.lt/img/logo-1636289458.jpg',
+    subject: 'Fresko fiorito',
+    connection:
+      'Vadovės Rasos Stonienės vyras visiškai susijęs su Gazprom, perkant produktus ramiam verslininkus užsiimančiais aferomis su rusiškomis dujomis',
+    about: 'Liofilizuoti vaisiai',
+    source: 'https://lt.m.wikipedia.org/wiki/Rimandas_Stonys',
+  },
+  {
+    subject: 'RV Transport',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBHQtQUbXmQJymz6Y0hfZs6GOZT_bWsAKi0Q&usqp=CAU',
+    about: 'Logistika',
+    connection:
+      'Transporto firma. Veikia Lietuvoje, turi filialą Rusijoje (Kaliningrade)',
+    source: 'https://www.rvtransport.lt/kontaktai/',
+  },
+  {
+    subject: 'Avia Solutions Group',
+    logo: 'https://aviasg.com/images/top_logo.png',
+    about: 'Aviacija',
+    connection:
+      'Gedimino Žiemelio grupė valdanti Aviacijos verslo įmones visame pasaulyje. Valdo įmones: „Avion Express“, „Tiketa Tour“ „FL Technics“, „BGS“, „BAA Training“, „KlasJet“, „Magma Aviation“. Statė oro uostą Maskvoje. Užsakymą gavo, po to, kai jo tėvas Vidmantas Žiemelis organizavo anti Visagino AE referendumą. Vėliau iškilo Astravo AE šalia Vilniaus. Direktorių tarybos narys: Kremliaus draugas Lietuvoje Vygaudas Ušackas',
+    source:
+      'https://www.15min.lt/naujiena/aktualu/komentarai/marius-laur…us-kokie-tikrieji-g-ziemelio-rysiai-su-kremliumi-500-1283658',
+  },
 ]
