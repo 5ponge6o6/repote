@@ -267,7 +267,7 @@ export const data: DataType[] = [
     logo: 'https://freskofiorito.lt/img/logo-1636289458.jpg',
     subject: 'Fresko fiorito',
     connection:
-      'Vadovės Rasos Stonienės vyras visiškai susijęs su Gazprom, perkant produktus ramiam verslininkus užsiimančiais aferomis su rusiškomis dujomis',
+      'Vadovės Rasos Stonienės vyras visiškai susijęs su Gazprom, perkant produktus remiam verslininkus užsiimančiais aferomis su rusiškomis dujomis',
     about: 'Liofilizuoti vaisiai',
     source: 'https://lt.m.wikipedia.org/wiki/Rimandas_Stonys',
   },
