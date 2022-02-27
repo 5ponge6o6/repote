@@ -6,7 +6,8 @@ import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 
 import TextField from '@mui/material/TextField'
-import FormGroup from '@mui/material/FormGroup'
+import IconButton from '@mui/material/IconButton'
+import CloseIcon from '@mui/icons-material/Close'
 import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
 import Alert from '@mui/material/Alert'
@@ -185,7 +186,7 @@ export const SubmissionModal = ({ onClose }: Props) => {
 
     const mappedValues = Object.entries(values)
       .map(([key, value]) => {
-        return `[${key}]::[${value}]`
+        return `[[${key}:${value}]]`
       })
       .join('%0d%0a') // mail new line
 
@@ -206,6 +207,11 @@ export const SubmissionModal = ({ onClose }: Props) => {
       aria-describedby='modal-modal-description'
     >
       <Paper className={styles.container}>
+        {step === 'initial' && (
+          <IconButton className={styles.closeButton} onClick={onClose}>
+            <CloseIcon />
+          </IconButton>
+        )}
         {step === 'initial' && <FormContent onSubmit={onSubmit} />}
         {step === 'info' && <InfoContent onClose={onClose} message={message} />}
       </Paper>

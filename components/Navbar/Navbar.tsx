@@ -7,12 +7,25 @@ import Typography from '@mui/material/Typography'
 import InputBase from '@mui/material/InputBase'
 import SearchIcon from '@mui/icons-material/Search'
 import Grid from '@mui/material/Grid'
-import Tooltip from '@mui/material/Tooltip'
+import Button from '@mui/material/Button'
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip'
 import AddTaskSharpIcon from '@mui/icons-material/AddTaskSharp'
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import QrCodeScanner from '@mui/icons-material/QrCodeScanner'
+import { styled } from '@mui/material/styles'
+import { useLocalStorage } from '../../utils/useLocalStorage'
 
 import styles from './Navbar.module.css'
 import Link from 'next/link'
+
+const CustomWidthTooltip = styled(({ className, ...props }: any) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))({
+  [`& .${tooltipClasses.tooltip}`]: {
+    maxWidth: 500,
+    padding: '2rem',
+  },
+})
 
 interface Props {
   onSearch: (value: string) => void
@@ -20,6 +33,8 @@ interface Props {
 }
 
 export const Navbar = ({ onSearch, onSubmission }: Props) => {
+  const [aboutShown, setAboutShown] = useLocalStorage('aboutShown', '')
+
   const onSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     onSearch(event.target.value)
   }
@@ -30,17 +45,55 @@ export const Navbar = ({ onSearch, onSubmission }: Props) => {
         <Toolbar>
           <Tooltip title='Pridėti daugiau subjektų' placement='right'>
             <IconButton onClick={onSubmission}>
-              <AddTaskSharpIcon className={styles.addIcon} />
+              <AddTaskSharpIcon className={styles.icon} />
             </IconButton>
           </Tooltip>
 
           <Link href='/qr' passHref>
             <Tooltip title='Tikrinti kilmės šalį pagal brukšninį kodą' placement='right'>
               <IconButton component='a'>
-                <QrCodeScanner className={styles.addIcon} />
+                <QrCodeScanner className={styles.icon} />
               </IconButton>
             </Tooltip>
           </Link>
+
+          <CustomWidthTooltip
+            {...(aboutShown !== 'shown' ? { open: true } : {})}
+            title={
+              <Typography>
+                Pateikiame patikrintą sąrašą pilnai arba dalinai Rusijos
+                kapitalo verslo subjektų; verslų, kurie glaudžiai
+                bendradarbiauja su agresoriaus režimu. Jų prekių ar paslaugų
+                pirkimas remia Rusijos agresiją Ukrainoje, todėl kviečiame to
+                atsisakyti.
+                <br />
+                <br />
+                Слава Україні! Героям слава! 🇺🇦
+                {aboutShown !== 'shown' && (
+                  <>
+                    <br />
+                    <br />
+                    <Button
+                      size='small'
+                      color='success'
+                      variant='contained'
+                      fullWidth
+                      onClick={() => {
+                        setAboutShown('shown')
+                      }}
+                    >
+                      Supratau, uždaryti
+                    </Button>
+                  </>
+                )}
+              </Typography>
+            }
+            placement='bottom-end'
+          >
+            <IconButton>
+              <HelpOutlineIcon className={styles.icon} />
+            </IconButton>
+          </CustomWidthTooltip>
 
           <Typography
             variant='caption'

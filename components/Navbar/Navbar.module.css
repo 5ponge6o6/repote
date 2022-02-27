@@ -12,6 +12,10 @@
   margin-left: 1rem !important;
 }
 
-.addIcon {
+.icon {
   color: white;
+}
+
+.about {
+  width: 22rem;
 }
