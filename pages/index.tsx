@@ -76,8 +76,19 @@ const Home: NextPage = () => {
           extraIcons={
             <Link href='/buy-ukr' passHref>
               <Tooltip title='Rinkis Ukrainietišką' placement='bottom-end'>
-                <IconButton component='a'>
+                <IconButton component='a' sx={{ position: 'relative' }}>
                   <ShoppingCart sx={{ color: 'white' }} />
+                  <div
+                    style={{
+                      position: 'absolute',
+                      right: 2,
+                      bottom: 0,
+                      fontSize: 18,
+                      color: 'white',
+                    }}
+                  >
+                    🇺🇦
+                  </div>
                 </IconButton>
               </Tooltip>
             </Link>
