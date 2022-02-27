@@ -31,9 +31,18 @@ const CustomWidthTooltip = styled(({ className, ...props }: any) => (
 interface Props {
   onSearch: (value: string) => void
   onSubmission: () => void
+  title: React.ReactNode
+  helpText: React.ReactNode
+  extraIcons?: React.ReactNode
 }
 
-export const Navbar = ({ onSearch, onSubmission }: Props) => {
+export const Navbar = ({
+  onSearch,
+  onSubmission,
+  title,
+  helpText,
+  extraIcons,
+}: Props) => {
   const [aboutShown, setAboutShown] = useLocalStorage('aboutShown', '')
 
   const onSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -61,20 +70,15 @@ export const Navbar = ({ onSearch, onSubmission }: Props) => {
             </Tooltip>
           </Link>
 
+          {extraIcons}
+
           <CustomWidthTooltip
             {...(aboutShown !== 'shown' ? { open: true } : {})}
             enterTouchDelay={1}
             leaveTouchDelay={5000}
             title={
               <Typography>
-                Pateikiame patikrintą sąrašą pilnai arba dalinai Rusijos
-                kapitalo verslo subjektų; verslų, kurie glaudžiai
-                bendradarbiauja su agresoriaus režimu. Jų prekių ar paslaugų
-                pirkimas remia Rusijos agresiją Ukrainoje, todėl kviečiame to
-                atsisakyti.
-                <br />
-                <br />
-                Слава Україні! Героям слава! 🇺🇦
+                {helpText}
                 {aboutShown !== 'shown' && (
                   <>
                     <br />
@@ -119,7 +123,7 @@ export const Navbar = ({ onSearch, onSubmission }: Props) => {
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             className={styles.title}
           >
-            Ar Susiję Su rusija?
+            {title}
             {/* Is It Connected To russia? */}
           </Typography>
 

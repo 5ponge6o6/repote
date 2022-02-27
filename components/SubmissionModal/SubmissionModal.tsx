@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { ReactNode, useState } from 'react'
 import { Form, Field } from 'react-final-form'
 import Modal from '@mui/material/Modal'
 import Box from '@mui/material/Box'
@@ -16,6 +16,8 @@ import styles from './SubmissionModal.module.css'
 
 interface Props {
   onClose: () => void
+  endpoint: string
+  beforeForm?: ReactNode
 }
 
 const validHttpUrl = (value: string) => {
@@ -87,7 +89,7 @@ const FFTextField = (props: FFTextField) => {
   )
 }
 
-const FormContent = ({ onSubmit }: any) => {
+const FormContent = ({ onSubmit, beforeForm }: any) => {
   return (
     <Form
       onSubmit={onSubmit}
@@ -97,6 +99,8 @@ const FormContent = ({ onSubmit }: any) => {
             <Typography id='modal-modal-title' variant='h6' component='h2'>
               Pridėti subjektą
             </Typography>
+
+            {beforeForm}
 
             <FFTextField
               name='subject'
@@ -142,7 +146,7 @@ const FormContent = ({ onSubmit }: any) => {
   )
 }
 
-export const SubmissionModal = ({ onClose }: Props) => {
+export const SubmissionModal = ({ onClose, endpoint, beforeForm }: Props) => {
   const [message, setMessage] = useState('')
 
   const onSubmit = (values: any) => {
@@ -157,7 +161,7 @@ export const SubmissionModal = ({ onClose }: Props) => {
       formData.append(key, String(value))
     })
 
-    fetch('https://formpost.app/stoprus@protonmail.com', {
+    fetch(endpoint, {
       method: 'post',
       body: formData,
       mode: 'no-cors',
@@ -184,7 +188,7 @@ export const SubmissionModal = ({ onClose }: Props) => {
         {message ? (
           <Alert severity='success'>{message}</Alert>
         ) : (
-          <FormContent onSubmit={onSubmit} />
+          <FormContent onSubmit={onSubmit} beforeForm={beforeForm} />
         )}
       </Paper>
     </Modal>

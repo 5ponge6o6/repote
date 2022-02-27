@@ -10,10 +10,10 @@ import { List } from '../components/List/List'
 import { SubmissionModal } from '../components/SubmissionModal/SubmissionModal'
 
 import { DataType } from '../types/data'
-import { data, getId } from '../data'
+import { data, getId } from '../data/ukrainian'
 import Link from 'next/link'
 import { Alert, IconButton, Tooltip } from '@mui/material'
-import { ShoppingCart } from '@mui/icons-material'
+import { RemoveShoppingCart } from '@mui/icons-material'
 
 let miniSearch = new MiniSearch({
   fields: ['subject', 'about'], // fields to index for full-text search
@@ -29,7 +29,7 @@ miniSearch.addAll(data)
 
 const theme = createTheme()
 
-const Home: NextPage = () => {
+const BuyUkr: NextPage = () => {
   const [isSubmissionOpen, setIsSubmissionOpen] = useState(false)
   const [results, setResults] = useState<DataType[]>([])
   const [terms, setTerms] = useState<string[]>([])
@@ -54,30 +54,29 @@ const Home: NextPage = () => {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Ar Susiję Su rusija?</title>
+        <title>Rinkis Ukrainietiška</title>
       </Head>
 
       <div>
         <Navbar
           onSearch={executeSearch}
           onSubmission={onSubmission}
-          title='Ar Susiję Su rusija?'
+          title='Rinkis Ukrainietišką'
           helpText={
             <>
-              Pateikiame patikrintą sąrašą pilnai arba dalinai Rusijos kapitalo
-              verslo subjektų; verslų, kurie glaudžiai bendradarbiauja su
-              agresoriaus režimu. Jų prekių ar paslaugų pirkimas remia Rusijos
-              agresiją Ukrainoje, todėl kviečiame to atsisakyti.
+              Pateikiame patikrintą sąrašą pilnai arba dalinai Ukrainietiško
+              kapitalo verslo subjektų; verslų, kurių produkciją pirkdami galite
+              bent truputį prisidėti prie nepriklausomos Ukrainos ateities
               <br />
               <br />
               Слава Україні! Героям слава! 🇺🇦
             </>
           }
           extraIcons={
-            <Link href='/buy-ukr' passHref>
-              <Tooltip title='Rinkis Ukrainietišką' placement='bottom-end'>
+            <Link href='/' passHref>
+              <Tooltip title='Susiję su rusija' placement='bottom-end'>
                 <IconButton component='a'>
-                  <ShoppingCart sx={{ color: 'white' }} />
+                  <RemoveShoppingCart sx={{ color: 'white' }} />
                 </IconButton>
               </Tooltip>
             </Link>
@@ -89,12 +88,12 @@ const Home: NextPage = () => {
         {isSubmissionOpen && (
           <SubmissionModal
             beforeForm={
-              <Alert severity='warning'>
-                Pridėkite su rusija susijusį subjektą
+              <Alert severity='info'>
+                Pridėkite Ukrainos kompaniją ar subjektą
               </Alert>
             }
             onClose={onModalClose}
-            endpoint='https://formpost.app/stoprus@protonmail.com'
+            endpoint='https://formpost.app/buyukr@protonmail.com'
           />
         )}
       </div>
@@ -102,4 +101,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default BuyUkr
