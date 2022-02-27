@@ -288,13 +288,13 @@ export const data: DataType[] = [
     source:
       'https://www.15min.lt/naujiena/aktualu/komentarai/marius-laurinavicius-kokie-tikrieji-g-ziemelio-rysiai-su-kremliumi-500-1283658',
   },
-  {
-    subject: 'Salmo',
-    logo: 'https://salmoru.com/local/assets/img/head-logo.svg',
-    about: 'Žūklės prekės',
-    connection: 'Žūklės prekės, rusų kapitalo',
-    source: 'https://salmoru.com/',
-  },
+  // {
+  //   subject: 'Salmo',
+  //   logo: 'https://salmoru.com/local/assets/img/head-logo.svg',
+  //   about: 'Žūklės prekės',
+  //   connection: 'Žūklės prekės, rusų kapitalo',
+  //   source: 'https://salmoru.com/',
+  // },
   {
     subject: 'Dominos pizza LT',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/7/74/Dominos_pizza_logo.svg',
@@ -311,5 +311,12 @@ export const data: DataType[] = [
     connection:
       'Filmukai, knygos, įv. prekės gimtadieniams ir pan. Rusų kompanijos animakord kūrinys.',
     source: 'https://en.wikipedia.org/wiki/Masha_and_the_Bear',
+  },
+  {
+    subject: 'Sirin development',
+    about: 'Nekilnojamo turto vystymo paslaugos',
+    connection: 'Girtekos savininkų įmonė',
+    source: 'https://www.girteka.eu/sirin-developmenten/',
+    logo: 'https://media-exp1.licdn.com/dms/image/C4E0BAQHNitTwM6HKmw/company-logo_200_200/0/1642586448543?e=1654128000&v=beta&t=XlB6ObBq2dip2ro84hE3_y3zFJzFkZJF5FQRn-218RE',
   },
 ]
