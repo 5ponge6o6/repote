@@ -286,7 +286,7 @@ export const data: DataType[] = [
     connection:
       'Gedimino Žiemelio grupė valdanti Aviacijos verslo įmones visame pasaulyje. Valdo įmones: „Avion Express“, „Tiketa Tour“ „FL Technics“, „BGS“, „BAA Training“, „KlasJet“, „Magma Aviation“. Statė oro uostą Maskvoje. Užsakymą gavo, po to, kai jo tėvas Vidmantas Žiemelis organizavo anti Visagino AE referendumą. Vėliau iškilo Astravo AE šalia Vilniaus. Direktorių tarybos narys: Kremliaus draugas Lietuvoje Vygaudas Ušackas',
     source:
-      'https://www.15min.lt/naujiena/aktualu/komentarai/marius-laur…us-kokie-tikrieji-g-ziemelio-rysiai-su-kremliumi-500-1283658',
+      'https://www.15min.lt/naujiena/aktualu/komentarai/marius-laurinavicius-kokie-tikrieji-g-ziemelio-rysiai-su-kremliumi-500-1283658',
   },
   {
     subject: 'Salmo',
@@ -303,5 +303,13 @@ export const data: DataType[] = [
     about: 'Picos',
     source:
       'https://www.lrt.lt/naujienos/verslas/4/1450560/domino-s-pizza-piceriju-tinklas-zengia-i-lietuva',
+  },
+  {
+    subject: 'Maša i medved',
+    logo: 'https://scontent.fvno2-1.fna.fbcdn.net/v/t1.18169-9/10350425_583719548394987_694100797003039110_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=0xNVQcGEdecAX9og7H5&_nc_ht=scontent.fvno2-1.fna&oh=00_AT_RJqERYAYQAQBNPaAPMXSt7YZigc9pia7P2Pi1Pgj9sA&oe=62423709',
+    about: 'Prekės ženklas',
+    connection:
+      'Filmukai, knygos, įv. prekės gimtadieniams ir pan. Rusų kompanijos animakord kūrinys.',
+    source: 'https://en.wikipedia.org/wiki/Masha_and_the_Bear',
   },
 ]
