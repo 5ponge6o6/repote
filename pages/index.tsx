@@ -67,8 +67,9 @@ const Home: NextPage = () => {
             <>
               Pateikiame patikrintą sąrašą pilnai arba dalinai Rusijos kapitalo
               verslo subjektų; verslų, kurie glaudžiai bendradarbiauja su
-              agresoriaus režimu. Jų prekių ar paslaugų pirkimas remia Rusijos
-              agresiją Ukrainoje, todėl kviečiame to atsisakyti.
+              agresoriaus režimu, ar kitaip turi glaudžių sąsajų su Rusija.
+              Rinkdamiesi prekes ar paslaugas atitinkamai įvertinkite
+              informaciją pateiktą šiame puslapyje
               <br />
               <br />
               Слава Україні! Героям слава! 🇺🇦
