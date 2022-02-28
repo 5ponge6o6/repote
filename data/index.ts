@@ -217,13 +217,13 @@ export const data: DataType[] = [
     connection: 'Rusijos kapitalo įmonė (“Orimi Trade”, Sankt Peterburgas)',
     source: 'https://maximus.mn/?product=tess',
   },
-  {
-    subject: 'Rollton',
-    logo: 'https://ksd-images.lt/display/aikido/store/322fe221a6b02a19f1c7abcdbad6ea98.jpg',
-    about: 'Makaronai',
-    connection: 'Rusijos kapitalo įmonė',
-    source: 'https://kian.ru/eng/projects/rollton',
-  },
+  // {
+  //   subject: 'Rollton',
+  //   logo: 'https://ksd-images.lt/display/aikido/store/322fe221a6b02a19f1c7abcdbad6ea98.jpg',
+  //   about: 'Makaronai',
+  //   connection: 'Rusijos kapitalo įmonė',
+  //   source: 'https://kian.ru/eng/projects/rollton',
+  // },
   {
     subject: 'UAB Morendi',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/MORENDI_LOGO.jpg/800px-MORENDI_LOGO.jpg',
@@ -318,5 +318,27 @@ export const data: DataType[] = [
     connection: 'Girtekos savininkų įmonė',
     source: 'https://www.girteka.eu/sirin-developmenten/',
     logo: 'https://media-exp1.licdn.com/dms/image/C4E0BAQHNitTwM6HKmw/company-logo_200_200/0/1642586448543?e=1654128000&v=beta&t=XlB6ObBq2dip2ro84hE3_y3zFJzFkZJF5FQRn-218RE',
+  },
+  {
+    subject: 'CyberX arena',
+    logo: 'https://cyberxarena.lt/wp-content/uploads/2020/10/Logo_did.png',
+    about: 'Laisvalaikio erdvė',
+    connection: 'Pagrindiniai įmonės akcininkai yra rusų fondo investuotojai.',
+    source: 'https://cyberx-franchise.ru/',
+  },
+  {
+    subject: 'R.O.C.S',
+    about: 'Burnos priežiūros priemonės',
+    connection: 'Priklauso DRC group, kuri įkurta 2001 m. Maskvoje',
+    source: 'https://ee.linkedin.com/company/r.o.c.s.',
+    logo: 'https://www.rocsinfo.com/img/svg/logo.svg',
+  },
+  {
+    subject: 'Ketch Up',
+    logo: 'https://images.app.goo.gl/EDwjMXZtK62EnjGE9',
+    about: 'Restoranų tinklas',
+    connection:
+      'Tarptautinis rusų restoranų tinklas, pirmą kartą įkurtas Maskvoje.',
+    source: 'https://msk.ketch-up.ru/en',
   },
 ]
