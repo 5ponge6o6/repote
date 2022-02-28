@@ -202,14 +202,14 @@ export const data: DataType[] = [
     logo: 'https://www.motoshop.lt/skin/frontend/default/motoshop/images/logo.png',
     connection: 'Vičiūnai Group narė',
   },
-  {
-    subject: 'Girteka logistics',
-    logo: 'https://www.girteka.eu/wp-content/uploads/Girteka-logo-transp-2.png',
-    about: 'Logistika',
-    connection:
-      'Transporto bazė Smolenske, krovinių pervežimas iš vakarų Europos į Rusiją',
-    source: 'https://www.girteka.eu/lt/drivers/transporto-bazes/',
-  },
+  // {
+  //   subject: 'Girteka logistics',
+  //   logo: 'https://www.girteka.eu/wp-content/uploads/Girteka-logo-transp-2.png',
+  //   about: 'Logistika',
+  //   connection:
+  //     'Transporto bazė Smolenske, krovinių pervežimas iš vakarų Europos į Rusiją',
+  //   source: 'https://www.girteka.eu/lt/drivers/transporto-bazes/',
+  // },
   {
     subject: 'Tess',
     logo: 'https://img.mazuma.lt/media/images/maxima/maxima_4ecf038a62b1b31c127457488eb91a65df450fa35715a7f0703ab235e2bd0931.jpg',
@@ -312,13 +312,13 @@ export const data: DataType[] = [
       'Filmukai, knygos, įv. prekės gimtadieniams ir pan. Rusų kompanijos animakord kūrinys.',
     source: 'https://en.wikipedia.org/wiki/Masha_and_the_Bear',
   },
-  {
-    subject: 'Sirin development',
-    about: 'Nekilnojamo turto vystymo paslaugos',
-    connection: 'Girtekos savininkų įmonė',
-    source: 'https://www.girteka.eu/sirin-developmenten/',
-    logo: 'https://media-exp1.licdn.com/dms/image/C4E0BAQHNitTwM6HKmw/company-logo_200_200/0/1642586448543?e=1654128000&v=beta&t=XlB6ObBq2dip2ro84hE3_y3zFJzFkZJF5FQRn-218RE',
-  },
+  // {
+  //   subject: 'Sirin development',
+  //   about: 'Nekilnojamo turto vystymo paslaugos',
+  //   connection: 'Girtekos savininkų įmonė',
+  //   source: 'https://www.girteka.eu/sirin-developmenten/',
+  //   logo: 'https://media-exp1.licdn.com/dms/image/C4E0BAQHNitTwM6HKmw/company-logo_200_200/0/1642586448543?e=1654128000&v=beta&t=XlB6ObBq2dip2ro84hE3_y3zFJzFkZJF5FQRn-218RE',
+  // },
   {
     subject: 'CyberX arena',
     logo: 'https://cyberxarena.lt/wp-content/uploads/2020/10/Logo_did.png',
