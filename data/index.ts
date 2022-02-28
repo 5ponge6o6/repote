@@ -247,15 +247,15 @@ export const data: DataType[] = [
     source:
       'https://www.lrt.lt/naujienos/verslas/4/38522/verslininkas-v-…ris-galesime-savo-tankus-sviestu-tepti-nes-jo-nebus-kur-deti',
   },
-  {
-    subject: 'Žagarės pieninė',
-    logo: 'http://www.joniskis.net/wp-content/uploads/2015/04/1.jpg',
-    about: 'Maisto prekės',
-    connection:
-      'V. Kaikario įmonė pagarsejusio prieš sankcijas Rusijai 2014m maidano metu, pripažinusio savo verslo ryšius su Rusija.',
-    source:
-      'https://www.lrt.lt/naujienos/verslas/4/38522/verslininkas-v-…ris-galesime-savo-tankus-sviestu-tepti-nes-jo-nebus-kur-deti',
-  },
+  // {
+  //   subject: 'Žagarės pieninė',
+  //   logo: 'http://www.joniskis.net/wp-content/uploads/2015/04/1.jpg',
+  //   about: 'Maisto prekės',
+  //   connection:
+  //     'V. Kaikario įmonė pagarsejusio prieš sankcijas Rusijai 2014m maidano metu, pripažinusio savo verslo ryšius su Rusija.',
+  //   source:
+  //     'https://www.lrt.lt/naujienos/verslas/4/38522/verslininkas-v-…ris-galesime-savo-tankus-sviestu-tepti-nes-jo-nebus-kur-deti',
+  // },
   {
     subject: 'Tui Baltics',
     logo: 'https://rekvizitai.vz.lt/photos/tt_baltic.jpg',
