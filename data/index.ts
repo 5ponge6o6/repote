@@ -335,10 +335,18 @@ export const data: DataType[] = [
   },
   {
     subject: 'Ketch Up',
-    logo: 'https://images.app.goo.gl/EDwjMXZtK62EnjGE9',
+    logo: 'data:image/png;base64,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',
     about: 'Restoranų tinklas',
     connection:
       'Tarptautinis rusų restoranų tinklas, pirmą kartą įkurtas Maskvoje.',
     source: 'https://msk.ketch-up.ru/en',
+  },
+  {
+    subject: 'Natura Siberica',
+    logo: 'https://e7.pngegg.com/pngimages/871/347/png-clipart-natura-siberica-cosmetics-logo-brand-organic-soap-text-cosmetics.png',
+    about: 'Kosmetika',
+    connection:
+      'Natūralios kūno priežiūros kosmetikos priemonės. 2008 m. įkurta Andrey Trubnikov, įsikūrusi Maskvoje, Rusijoje.',
+    source: 'https://en.wikipedia.org/wiki/Natura_Siberica',
   },
 ]
