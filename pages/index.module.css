@@ -14,3 +14,9 @@
   font-size: 1.2rem;
   color: white;
 }
+
+.alertLink {
+  /* color: white !important; */
+  text-decoration: underline;
+  margin-left: 0.3rem;
+}

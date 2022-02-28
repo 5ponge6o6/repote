@@ -86,6 +86,14 @@ const Home: NextPage = () => {
           }
         />
 
+        <Alert severity='info'>
+          Šis puslapis yra savanoriškas projektas, todėl dėl didelio pranešimų
+          kiekio gali įsivelti klaidų. Pastebėjus, prašome pranešti mums
+          <Link href='mailto:stoprus@protonmail.com' passHref>
+            <a className={styles.alertLink}>stoprus@protonmail.com</a>
+          </Link>
+        </Alert>
+
         <List data={results.length ? results : data} searchWords={terms} />
 
         {isSubmissionOpen && (
