@@ -30,7 +30,7 @@ const CustomWidthTooltip = styled(({ className, ...props }: any) => (
 
 interface Props {
   onSearch: (value: string) => void
-  onSubmission: () => void
+  onSubmission?: () => void
   title: React.ReactNode
   helpText: React.ReactNode
   extraIcons?: React.ReactNode
@@ -53,11 +53,13 @@ export const Navbar = ({
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static'>
         <Toolbar>
-          <Tooltip title='Pridėti daugiau subjektų' placement='bottom-end'>
-            <IconButton onClick={onSubmission}>
-              <AddTaskSharpIcon className={styles.icon} />
-            </IconButton>
-          </Tooltip>
+          {onSubmission && (
+            <Tooltip title='Pridėti daugiau subjektų' placement='bottom-end'>
+              <IconButton onClick={onSubmission}>
+                <AddTaskSharpIcon className={styles.icon} />
+              </IconButton>
+            </Tooltip>
+          )}
 
           <Link href='/qr' passHref>
             <Tooltip
