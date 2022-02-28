@@ -224,13 +224,13 @@ export const data: DataType[] = [
   //   connection: 'Rusijos kapitalo įmonė',
   //   source: 'https://kian.ru/eng/projects/rollton',
   // },
-  {
-    subject: 'UAB Morendi',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/MORENDI_LOGO.jpg/800px-MORENDI_LOGO.jpg',
-    about: 'Automobiliai',
-    source: 'https://www.morendi.ru/',
-    connection: 'Rusiško kapitalo įmonė įsikūrusi Vilniuje',
-  },
+  // {
+  //   subject: 'UAB Morendi',
+  //   logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/MORENDI_LOGO.jpg/800px-MORENDI_LOGO.jpg',
+  //   about: 'Automobiliai',
+  //   source: 'https://www.morendi.ru/',
+  //   connection: 'Rusiško kapitalo įmonė įsikūrusi Vilniuje',
+  // },
   {
     subject: 'DUNAEV',
     about: 'Jaukas ir kitos prekės žvejams',
