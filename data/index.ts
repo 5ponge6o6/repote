@@ -238,15 +238,15 @@ export const data: DataType[] = [
     logo: 'https://cdn.прикормка-дунаев.рф/wa-data/public/site/themes/vivashop1/img/logo@2x.jpg?v1644720059',
     source: 'https://xn----7sbbiihqqatpgkod7c.xn--p1ai/',
   },
-  {
-    subject: 'ŽŪB Delikatesas',
-    logo: 'https://www.atradau.lt/public_files/logos/0-20441300-1343916191_delikatesas-logo_pantone.gif',
-    about: 'Maisto prekės',
-    connection:
-      'V. Kaikario įmonė pagarsejusio prieš sankcijas Rusijai 2014m maidano metu, pripažinusio savo verslo ryšius su Rusija.',
-    source:
-      'https://www.lrt.lt/naujienos/verslas/4/38522/verslininkas-v-…ris-galesime-savo-tankus-sviestu-tepti-nes-jo-nebus-kur-deti',
-  },
+  // {
+  //   subject: 'ŽŪB Delikatesas',
+  //   logo: 'https://www.atradau.lt/public_files/logos/0-20441300-1343916191_delikatesas-logo_pantone.gif',
+  //   about: 'Maisto prekės',
+  //   connection:
+  //     'V. Kaikario įmonė pagarsejusio prieš sankcijas Rusijai 2014m maidano metu, pripažinusio savo verslo ryšius su Rusija.',
+  //   source:
+  //     'https://www.lrt.lt/naujienos/verslas/4/38522/verslininkas-v-…ris-galesime-savo-tankus-sviestu-tepti-nes-jo-nebus-kur-deti',
+  // },
   // {
   //   subject: 'Žagarės pieninė',
   //   logo: 'http://www.joniskis.net/wp-content/uploads/2015/04/1.jpg',
